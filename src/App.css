@@ -1,0 +1,102 @@
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+  background: linear-gradient(to right, #f9f9f9, #eef2f3);
+  font-family: 'Poppins', sans-serif;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  text-align: center;
+  color: #4a4e69;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.input {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 2px solid #4a4e69;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input:focus {
+  border-color: #9a8c98;
+  background-color: #f3f0f5;
+}
+
+button {
+  background-color: #4a4e69;
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: #22223b;
+}
+
+.section {
+  margin: 2rem 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.box {
+  padding: 1rem;
+  min-width: 40px;
+  text-align: center;
+  background-color: #f2e9e4;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  transition: transform 0.3s, background-color 0.3s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.active-text {
+  background-color: #c9ada7;
+  color: white;
+  transform: scale(1.2);
+}
+
+.active-pattern {
+  background-color: #9a8c98;
+  color: white;
+  transform: scale(1.2);
+}
+
+p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #22223b;
+}
+
+h2 {
+  text-align: center;
+  color: #4a4e69;
+  margin-bottom: 1rem;
+}
+
+/* Chart responsiveness */
+.recharts-wrapper {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
