@@ -18,6 +18,7 @@ import { UserBalance } from "./UserBalance";
 import { SignMessage } from "./SignMessage";
 import { SendingSolana } from "./SendingSolana";
 import TransactionHistory from "./TransactionHistory";
+import "./index.css";
 
 // Airdrop logic
 
@@ -30,8 +31,10 @@ function App() {
     >
       <WalletProvider wallets={[]} autoConnect>
         <WalletModalProvider>
-          <WalletMultiButton></WalletMultiButton>
-          <WalletDisconnectButton></WalletDisconnectButton>
+          <div className="flex flex-col md:flex-row gap-4 justify-center items-center my-6">
+            <WalletMultiButton className="!bg-purple-600 hover:!bg-purple-700 !text-white rounded-xl px-6 py-3 shadow-lg" />
+            <WalletDisconnectButton className="!bg-red-500 hover:!bg-red-600 !text-white rounded-xl px-6 py-3 shadow-lg" />
+          </div>
           <Airdrop />
           <UserBalance />
           <SignMessage />

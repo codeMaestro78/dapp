@@ -21,11 +21,17 @@ const TransactionHistory = () => {
     fetchTransaction();
   }, [wallet.publicKey, connection]);
   return (
-    <div>
-      <h3>Recent Transaction</h3>
-      {history.map((tx, idx) => (
-        <p key={idx}>{tx.signature}</p>
-      ))}
+    <div className="bg-white p-6 rounded-2xl shadow-md max-w-md mx-auto space-y-4">
+      <h3 className="text-lg font-semibold">Recent Transactions</h3>
+      {history.length === 0 ? (
+        <p className="text-gray-500">No transactions found</p>
+      ) : (
+        history.map((tx, idx) => (
+          <p key={idx} className="text-sm break-words text-gray-700">
+            {tx.signature}
+          </p>
+        ))
+      )}
     </div>
   );
 };

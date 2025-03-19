@@ -10,12 +10,19 @@ export function Airdrop() {
     alert("Airdroppped Sol");
   }
   return (
-    <div>
-      <input id="publickey" type="text" placeholder="Amount" />
-      <button id="publickey" onClick={sendAirdropToUser}>
-        Send AirDrop
+    <div className="bg-white p-6 rounded-2xl shadow-md max-w-md mx-auto space-y-4">
+      <input
+        id="airdropAmount"
+        type="number"
+        placeholder="Amount in SOL"
+        className="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
+      />
+      <button
+        onClick={sendAirdropToUser}
+        className="w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded-xl shadow"
+      >
+        Send Airdrop
       </button>
-      
     </div>
   );
 }

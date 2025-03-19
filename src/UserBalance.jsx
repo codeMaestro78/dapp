@@ -21,9 +21,11 @@ export function UserBalance() {
   }, [wallet.publicKey, connection]);
 
   return (
-    <div>
-      <p>SOL Balance:- </p>
-      <div id="balance">{balance.toFixed(4)} SOL</div>
+    <div className="bg-white p-6 rounded-2xl shadow-md max-w-md mx-auto text-center space-y-2">
+      <p className="text-lg font-medium">SOL Balance</p>
+      <div id="balance" className="text-2xl font-bold text-green-600">
+        {balance.toFixed(4)} SOL
+      </div>
     </div>
   );
 }
