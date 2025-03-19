@@ -15,9 +15,16 @@ export function SignMessage() {
     const encodeMessage = new TextEncoder().encode(message);
     const signature = await signMessage(encodeMessage);
 
-    if (!ed25519.verify(signature, encodeMessage, publicKey.toBytes()))
-      throw new Error();
-    alert("success", `Message signature: ${bs58.encode(signature)}`);
+    const isValid = !ed25519.verify(
+      signature,
+      encodeMessage,
+      publicKey.toBytes()
+    );
+    if (isValid) {
+      alert(`✅ Verified Signature: ${bs58.encode(signature)}`);
+    } else {
+      alert(`❌ Signature verification failed`);
+    }
   }
 
   return (

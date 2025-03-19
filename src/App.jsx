@@ -17,6 +17,7 @@ import { Airdrop } from "./Airdrop";
 import { UserBalance } from "./UserBalance";
 import { SignMessage } from "./SignMessage";
 import { SendingSolana } from "./SendingSolana";
+import TransactionHistory from "./TransactionHistory";
 
 // Airdrop logic
 
@@ -34,7 +35,8 @@ function App() {
           <Airdrop />
           <UserBalance />
           <SignMessage />
-          <SendingSolana  />
+          <SendingSolana />
+          <TransactionHistory />
         </WalletModalProvider>
       </WalletProvider>
     </ConnectionProvider>
